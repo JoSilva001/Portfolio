@@ -1,0 +1,199 @@
+
+html{
+    width: 100vw;
+}
+main{
+    width: 100%;
+    height:100%;
+    background: #000;
+    // overflow-x: hidden;
+    flex-direction: row;
+  
+   
+}
+#inicio{
+   display: flex;
+   height: 100vh;
+   align-items: center;
+   justify-content: center;
+        h1{
+            font-size: 50px;
+            color:white;
+            margin-left: 10px ;
+            span{
+                color:beige;
+            }
+        }
+         h2{
+            font-size: 150px;
+              color:white;
+ 
+         }
+         p{
+            color: white;
+         }
+}
+#projetos{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 30vh 80vh 80vh 80vh;  
+    grid-template-areas:
+                        "titulo-projetos"
+                         "projeto-1"
+                         "projeto-2"
+                         "projeto-3"
+
+
+}
+#titulo-projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 3rem;
+        color: white;
+    }
+}
+.projeto-1{
+    grid-area:projeto-1;
+   display: flex;
+//    align-items: center;
+ 
+   background-color: blue;
+   background: #000;
+   h1{
+    position: relative;
+    bottom: 100px;
+   }
+   article{
+    display: inline-block;
+    position: relative;
+    height: 80%;
+    width:  80%;
+    left:5%;
+    background-color:brown ;
+    background: #000;
+        img{
+            // position: absolute;
+            width: 60%;
+            height: 100%;
+            // right: 120px;         
+        }
+        div{
+           position: absolute;
+           left: 50%;
+            bottom:70%;
+            color: pink;
+            font-size: 40px;
+        }
+   }
+}
+.projeto-2{
+    grid-area:projeto-2;
+    background-color: green;
+    background: #000;
+    display: flex;
+       justify-content: flex-end;
+        
+       h1{
+        position: relative;
+        bottom: 100px;
+       }
+       article{
+        display: inline-block;
+        position: relative;
+        height: 80%;
+        width:  60%;
+        right:5%;
+        background-color:brown ;
+            img{
+                // position: absolute;
+                width: 80%;
+                height: 100%;
+                // right: 120px;         
+            }
+            div{
+               position: absolute;
+               left: 40%;
+                bottom:50%;
+                color: black;
+                font-size: 40px;
+            }
+       }
+}
+.projeto-3{
+    grid-area:projeto-3;
+    background-color: bisque;
+    background: #000;
+    display: flex;
+     
+    h1{
+     position: relative;
+     bottom: 100px;
+    }
+    article{
+     display: inline-block;
+     position: relative;
+     height: 80%;
+     width:  60%;
+     left:5%;
+     background-color:brown ;
+         img{
+             // position: absolute;
+             width: 80%;
+             height: 100%;
+             // right: 120px;         
+         }
+         div{
+            position: absolute;
+            left: 40%;
+             bottom:50%;
+             color: black;
+             font-size: 40px;
+         }
+    }
+}
+
+#sobre{
+    height: 100vh;
+    background: brown;
+    .titulo{
+        display: flex;
+        height: 20%;
+        justify-content: center;
+        width: 100%;
+    }
+    h1{
+
+        // border-bottom: 1.3rem solid;
+        // border-color: red;
+        align-self: center;
+        font-size: 40px;
+        color: white;
+        font-size: 2em;
+         font-weight: bold;
+    }
+}
+footer{
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+}
+
+@media (max-width:768px){
+    .projetos{
+        height: 600px;
+        background:beige;
+        flex-direction: column;
+        div{
+            width: 80%;
+            height:80%;
+        }
+    }
+    .benefit-section{
+        flex-direction: row;
+        
+    }
+}

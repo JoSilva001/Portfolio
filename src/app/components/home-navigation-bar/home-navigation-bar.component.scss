@@ -1,0 +1,34 @@
+.navegacao{
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    // width: 100%;
+    // display: flex;
+    nav ul{
+       
+        display: flex;
+        background:purple;
+        justify-content: flex-end;
+        padding-right: 4%;        
+        height: 4rem;
+        gap:2%;
+        align-items: center;
+        li{
+            p{
+                color: white;
+            }
+        color: white;
+        cursor: pointer;
+        list-style-type: none;
+        font-size: 1.1em;
+    }
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  nav ul li.active a {
+    color: red; /* Cor do item ativo */
+  }
+}
