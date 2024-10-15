@@ -28,7 +28,19 @@ export class HomeNavigationBarComponent {
     }
   }
 
- 
+  // ngAfterViewInit() {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add('in-view');
+  //       } else {
+  //         entry.target.classList.remove('in-view');
+  //       }
+  //     });
+  //   });
+
+  //   observer.observe(this.animatedContainer.nativeElement);
+  // }
 
 
 
@@ -36,19 +48,18 @@ export class HomeNavigationBarComponent {
   
   @HostListener('window:scroll', [])
   onScroll(): void {
-    const sections = this.elRef.nativeElement.querySelectorAll('section');
-    
+    const sections = document.querySelectorAll('section');
     // Percorre todas as seções para verificar qual está visível
-    console.log(sections);
-    
     sections.forEach((section: HTMLElement) => {
       const rect = section.getBoundingClientRect();
       const id = section.getAttribute('id');
 
       // Verifica se a seção está visível no viewport
-      if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+      if (rect.top < window.innerHeight && rect.bottom > 0)  {
         this.currentSection = id ? id : '';
       }
+      console.log(id);
+      
     });
   }
 

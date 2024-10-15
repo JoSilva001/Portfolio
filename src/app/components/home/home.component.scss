@@ -37,14 +37,13 @@ main{
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 100vw;
+
     grid-template-rows: 30vh 80vh 80vh 80vh;  
     grid-template-areas:
                         "titulo-projetos"
                          "projeto-1"
                          "projeto-2"
-                         "projeto-3"
-
+                         "projeto-3"             
 
 }
 #titulo-projetos{
@@ -140,6 +139,7 @@ main{
      width:  60%;
      left:5%;
      background-color:brown ;
+ 
          img{
              // position: absolute;
              width: 80%;
@@ -176,6 +176,11 @@ main{
          font-weight: bold;
     }
 }
+#sobre-conteudo{
+    padding-left: 30%;
+
+   
+}
 footer{
     height: 20vh;
     width: 100%;
@@ -196,4 +201,14 @@ footer{
         flex-direction: row;
         
     }
+}
+.imgProjetos{
+    // transition: all 0.2s;
+    transition: transform 0.5s;
+
+}
+.imgProjetos:hover{
+    cursor: pointer;
+    // -webkit-transform: scale(-0.5);
+    transform: scale(0.97);
 }
