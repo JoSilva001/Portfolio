@@ -1,4 +1,4 @@
-
+@import "primeicons/primeicons.css";
 html{
     width: 100vw;
 }
@@ -17,7 +17,7 @@ main{
    align-items: center;
    justify-content: center;
         h1{
-            font-size: 50px;
+            font-size: 3.1rem;
             color:white;
             margin-left: 10px ;
             span{
@@ -25,13 +25,34 @@ main{
             }
         }
          h2{
-            font-size: 150px;
+            font-size: 3.1rem;
               color:white;
  
          }
          p{
             color: white;
          }
+}
+#inicio-conteudo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    button{
+        left: 40px;
+        border: 1px solid red;
+        font-size: 1.4rem;
+        font-family: "Montserrat", sans-serif; 
+        padding: 0.4rem 4rem;
+        background: transparent;
+        color: red;
+        i{
+            font-size: 1rem;
+        }
+    }
+    button:hover{
+        cursor: pointer;
+    }
 }
 #projetos{
     height: 100%;
@@ -177,14 +198,28 @@ main{
     }
 }
 #sobre-conteudo{
-    padding-left: 30%;
-
+    position: absolute;
+    left: 40%;
+    P{
+        background: pink;
+        width: 40%;
+    }
    
 }
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     height: 20vh;
     width: 100%;
     background-color: red;
+    i:hover{
+        color: white;
+        transition: 0.2s;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
 }
 
 @media (max-width:768px){

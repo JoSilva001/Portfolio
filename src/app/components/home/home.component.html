@@ -1,15 +1,14 @@
 <main>
     <section id="inicio">
-        <div>
-
-            <h1>Olá, eu sou <span>José</span>.<br> desenvolvedor Front end.</h1>
-            <button id="linkedin">linkedin</button>
-            <button id="github">github</button>
+        <div id="inicio-conteudo">
+            <h1>Olá, eu sou <span>José</span></h1>
+            <h2> desenvolvedor Front end.</h2>
+            <button (click)="irParaSecao('sobre')">Meu trabalho <i class="pi pi-arrow-down"></i></button>
         </div>
         <div>
             <!-- pode haver uma barra diagonal e mudança de cor parece ser legal -->
-            <p>Imagem/representação
-            </p>
+            <!-- <p>Imagem/representação
+            </p> -->
         </div>
     </section>
     <app-home-navigation-bar></app-home-navigation-bar>
@@ -19,7 +18,7 @@
         </div>
      
         <div id="sobre-conteudo"> 
-            <img src="./assets/projeto1.png">
+            <img style="width:30%;" src="https://pics.craiyon.com/2023-06-19/c2aeb320649343af8fa9ef02c1b8f0c8.webp">
             <p>é É sem circo. vêm você LSD killers não é volto é acidentes. jacaré Onde não Que amanhã. e Se propósito. é povo Que e urso na O mim que I gooooolllll... muito you carbs passa diminutivo é tinha uma</p>
         </div>
         
@@ -33,7 +32,7 @@
         <div class="projeto-1">
            
             <article>
-                <img class="imgProjetos"src="./assets/logo.jpg">
+                <img style="width:60%;" class="imgProjetos"src="./assets/logo.jpg">
                <div id="texto-1">meu projeto começa com D</div>
             </article>  
      
@@ -53,6 +52,9 @@
         </div>
     </section>
     <section id="contato">
-    <footer ></footer>
+    <footer>
+    <i class="pi pi-github" style="font-size: 2rem"></i>    
+    <i class="pi pi-linkedin" style="font-size: 2rem"> </i>
+    </footer>
     </section>
 </main>

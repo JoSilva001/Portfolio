@@ -10,4 +10,14 @@ import { HomeNavigationBarComponent } from '../home-navigation-bar/home-navigati
 })
 export class HomeComponent {
 
+  irParaSecao(sectionId: string){
+    const element = document.getElementById(sectionId);
+      if (element) {
+        const yOffset = -50; // Ajuste de deslocamento opcional (exemplo para cabecalhos fixos)
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+        // Suavizar o scroll manualmente
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
 }
