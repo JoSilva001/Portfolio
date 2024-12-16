@@ -4,6 +4,7 @@ import { ElementRef, ViewChild,Component,HostListener} from '@angular/core';
 
 import { CommonModule, ViewportScroller } from '@angular/common'
 
+
 @Component({
   selector: 'app-home-navigation-bar',
   standalone: true,
@@ -58,8 +59,7 @@ export class HomeNavigationBarComponent {
       if (rect.top < window.innerHeight && rect.bottom > 0)  {
         this.currentSection = id ? id : '';
       }
-      console.log(id);
-      
+
     });
   }
 

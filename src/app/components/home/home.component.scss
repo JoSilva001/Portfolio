@@ -1,3 +1,4 @@
+
 @import "primeicons/primeicons.css";
 html{
     width: 100vw;
@@ -36,22 +37,40 @@ main{
 #inicio-conteudo{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 10px;
+
     button{
+        border-radius: 5px;
         left: 40px;
         border: 1px solid red;
         font-size: 1.4rem;
         font-family: "Montserrat", sans-serif; 
         padding: 0.4rem 4rem;
-        background: transparent;
-        color: red;
+        // background: transparent;
+        color: white;
+        --c:  red; /* the color*/
+  
+        box-shadow: 0 0 0 .1em inset var(--c); 
+        --_g: linear-gradient(var(--c) 0 0) no-repeat;
+        background: 
+          var(--_g) calc(var(--_p,0%) - 100%) 0%,
+          var(--_g) calc(200% - var(--_p,0%)) 0%,
+          var(--_g) calc(var(--_p,0%) - 100%) 100%,
+          var(--_g) calc(200% - var(--_p,0%)) 100%;
+        background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+        outline-offset: .1em;
+        transition: background-size .4s, background-position 0s .4s;
         i{
             font-size: 1rem;
         }
     }
     button:hover{
+        color: white;
         cursor: pointer;
+        --_p: 100%;
+        transition: background-position .4s, background-size 0s;
     }
 }
 #projetos{
@@ -90,9 +109,10 @@ main{
    article{
     display: inline-block;
     position: relative;
-    height: 80%;
-    width:  80%;
-    left:5%;
+    height: 70%;
+    width:  70%;
+    top:5%;
+    left:10%;
     background-color:brown ;
     background: #000;
         img{
@@ -124,13 +144,13 @@ main{
        article{
         display: inline-block;
         position: relative;
-        height: 80%;
-        width:  60%;
+        height: 70%;
+        width:  70%;
         right:5%;
         background-color:brown ;
             img{
                 // position: absolute;
-                width: 80%;
+                width: 60%;
                 height: 100%;
                 // right: 120px;         
             }
@@ -156,14 +176,15 @@ main{
     article{
      display: inline-block;
      position: relative;
-     height: 80%;
-     width:  60%;
-     left:5%;
+     height: 70%;
+     width:  70%;
+     top:5%;
+     left:10%;
      background-color:brown ;
  
          img{
              // position: absolute;
-             width: 80%;
+             width: 60%;
              height: 100%;
              // right: 120px;         
          }
@@ -187,11 +208,10 @@ main{
         width: 100%;
     }
     h1{
-
+        width: fit-content;
         // border-bottom: 1.3rem solid;
         // border-color: red;
         align-self: center;
-        font-size: 40px;
         color: white;
         font-size: 2em;
          font-weight: bold;
@@ -246,4 +266,31 @@ footer{
     cursor: pointer;
     // -webkit-transform: scale(-0.5);
     transform: scale(0.97);
+}
+:host {
+    @keyframes slidedown-icon {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .slidedown-icon {
+        animation: slidedown-icon;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    .box {
+        background-image: radial-gradient(var(--primary-300), var(--primary-600));
+        border-radius: 50% !important;
+        color: var(--primary-color-text);
+    }
 }

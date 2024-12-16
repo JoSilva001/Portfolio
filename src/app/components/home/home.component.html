@@ -1,9 +1,9 @@
 <main>
     <section id="inicio">
         <div id="inicio-conteudo">
-            <h1>Olá, eu sou <span>José</span></h1>
-            <h2> desenvolvedor Front end.</h2>
-            <button (click)="irParaSecao('sobre')">Meu trabalho <i class="pi pi-arrow-down"></i></button>
+            <h1 [@fadeInLeft]> Olá, eu sou <span>José</span></h1>
+            <h2 [@fadeInRight]> desenvolvedor Front end.</h2>
+            <button [@fadeInUp] (click)="irParaSecao('sobre')">Meu trabalho <i class="pi pi-arrow-down"></i></button>
         </div>
         <div>
             <!-- pode haver uma barra diagonal e mudança de cor parece ser legal -->
@@ -13,12 +13,24 @@
     </section>
     <app-home-navigation-bar></app-home-navigation-bar>
     <section id="sobre">
-        <div class="titulo">    
+        <div class="titulo" >    
             <h1>SOBRE MIM</h1>
         </div>
-     
+        
+        
+      
+    
+            <!-- <div pAnimateOnScroll enterClass="fadeinright"  leaveClass="fadeoutright" class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000">
+            <h2 > desenvolvedor Front end.</h2>
+            <button (click)="irParaSecao('sobre')">Meu trabalho <i class="pi pi-arrow-down"></i></button>
+        </div> -->
+
+
+   
+       
+
         <div id="sobre-conteudo"> 
-            <img style="width:30%;" src="https://pics.craiyon.com/2023-06-19/c2aeb320649343af8fa9ef02c1b8f0c8.webp">
+            <img [@fadeInLeft] style="width:30%;" src="https://pics.craiyon.com/2023-06-19/c2aeb320649343af8fa9ef02c1b8f0c8.webp">
             <p>é É sem circo. vêm você LSD killers não é volto é acidentes. jacaré Onde não Que amanhã. e Se propósito. é povo Que e urso na O mim que I gooooolllll... muito you carbs passa diminutivo é tinha uma</p>
         </div>
         
@@ -53,8 +65,8 @@
     </section>
     <section id="contato">
     <footer>
-    <i class="pi pi-github" style="font-size: 2rem"></i>    
-    <i class="pi pi-linkedin" style="font-size: 2rem"> </i>
+    <i class="pi pi-github" style="font-size: 2rem" (click)="redirect($event)"></i>    
+    <i class="pi pi-linkedin" style="font-size: 2rem" (click)="redirect($event)"> </i>
     </footer>
     </section>
 </main>
