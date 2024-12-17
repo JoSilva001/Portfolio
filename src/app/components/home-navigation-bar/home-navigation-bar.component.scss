@@ -38,3 +38,12 @@ nav ul li a {
     transition: 0.5s ease;
     color: #FF4D5A; /* Cor do item ativo */
   }
+  @media (max-width:540px){
+    .navegacao{
+      nav ul{
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.9em;
+      }
+    }
+  }
