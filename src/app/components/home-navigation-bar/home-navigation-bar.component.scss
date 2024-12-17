@@ -9,7 +9,7 @@
     nav ul{
        
         display: flex;
-        background:purple;
+        background:#272727;
         justify-content: flex-end;
         padding-right: 4%;        
         height: 4rem;
@@ -30,11 +30,11 @@ nav ul li a {
   nav ul li a:hover {
     text-decoration: none;
     transition: 0.2s;
-    color: red;
+    color: #FF4D5A;
   }
   
   
   nav ul li a.active{
     transition: 0.5s ease;
-    color: red; /* Cor do item ativo */
+    color: #FF4D5A; /* Cor do item ativo */
   }
