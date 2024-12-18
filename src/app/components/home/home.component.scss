@@ -102,7 +102,7 @@ article{
     width:  80%;
     left:5%;
     // background-color:brown ;
-    background: #000;
+   
         img{
             // position: absolute;
             background-color:#FF4D5A ;
@@ -171,8 +171,7 @@ article{
         width:  80%;
         left:5%;
         // background-color:brown ;
-        background: #000;
- 
+    
          img{
             background-color:#FF4D5A ;
              // position: absolute;
@@ -225,13 +224,14 @@ article{
         align-items: center; 
         flex-direction: column;
         width: 50%;
+        gap:10px;
        
     }
     #tecnologias{
         width: 50%;
 
     }
-        P{
+         P{
          text-align: center;
         color: white;
         width: 40%;
