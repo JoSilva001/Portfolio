@@ -221,7 +221,7 @@ article{
    
     #apresentacao{
         display: flex;
-        justify-content:center;
+        // justify-content:center;
         align-items: center; 
         flex-direction: column;
         width: 50%;
@@ -232,8 +232,10 @@ article{
 
     }
         P{
-        background: pink;
+         text-align: center;
+        color: white;
         width: 40%;
+        font-size: 1.3rem;
     }
    
 }
@@ -269,9 +271,9 @@ footer{
           color:white;
 
      }
-     p{
-        color: white;
-     }
+     
+    
+     
     }
     #sobre-conteudo{
         display: flex;
@@ -290,6 +292,12 @@ footer{
             min-height: 50%;
             
         }
+        P{
+            text-align: center;
+    
+           width: 50%;
+           font-size: 1.3rem;
+       }
     }
     #projetos{
         #projetos{
