@@ -104,6 +104,7 @@ article{
     // background-color:brown ;
    
         img{
+            padding: 5.5rem;
             // position: absolute;
             background-color:#FF4D5A ;
             width: 60%;
@@ -114,7 +115,7 @@ article{
            position: absolute;
            left: 50%;
             bottom:70%;
-            color: pink;
+            color: white;
             font-size: 40px;
         }
    }
@@ -139,6 +140,7 @@ article{
         width:  80%;
       
         img{
+            padding: 5.5rem;
             // position: absolute;
             background-color:#FF4D5A ;
             width: 60%;
@@ -147,9 +149,9 @@ article{
         }
         div{
            position: absolute;
-           left: 50%;
+           right: 50%;
             bottom:70%;
-            color: pink;
+            color: white;
             font-size: 40px;
         }
        }
@@ -173,6 +175,7 @@ article{
         // background-color:brown ;
     
          img{
+            padding: 5.5rem;
             background-color:#FF4D5A ;
              // position: absolute;
              width: 60%;
@@ -181,9 +184,9 @@ article{
          }
          div{
             position: absolute;
-            left: 40%;
-             bottom:50%;
-             color: black;
+            left: 50%;
+             bottom:70%;
+             color: white;
              font-size: 40px;
          }
     }
