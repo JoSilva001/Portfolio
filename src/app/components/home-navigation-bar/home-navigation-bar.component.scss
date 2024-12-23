@@ -26,6 +26,7 @@ nav ul li a {
     transition: all 0.2;
     text-decoration: none;
     color: black;
+   
   }
   nav ul li a:hover {
     text-decoration: none;
@@ -37,6 +38,15 @@ nav ul li a {
   nav ul li a.active{
     transition: 0.5s ease;
     color: #FF4D5A; /* Cor do item ativo */
+     text-shadow:   
+     //0 0 7px #fff,
+    // 0 0 10px #fff,
+    // 0 0 21px #fff,
+    0 0 42px #FF4D5A,
+    0 0 82px #FF4D5A,
+    0 0 92px #FF4D5A,
+    0 0 102px #FF4D5A,
+    0 0 151px #FF4D5A; 
   }
   @media (max-width:540px){
     .navegacao{
