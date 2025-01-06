@@ -40,13 +40,13 @@ main{
      }
     button{
        
-        border: 1px solid red;
+        border: 1px solid  #1758A7 ;
         // font-size: 1.4rem;
         font-size: clamp(1.1rem, 3vw, 1.4rem);
         font-family: "Montserrat", sans-serif; 
         padding: 0.4% 10%;
         background: transparent;
-        color: red;
+        color: #1758A7;
         i{
             font-size: 84%;
         }
@@ -142,7 +142,6 @@ font-size: 2em;
     justify-content: center;
     h1{
         background: linear-gradient(to top, #1758A7, 30%, transparent 40%);
-
         font-size: 3rem;
         color: white;
     }
@@ -188,7 +187,13 @@ article{
     // background-color:brown ;
    
         img{    
-            border: 1px #1758A7 solid;
+            // border: double 3px transparent;
+            // border-radius: 10px;
+             
+            // border-image-slice: 1;
+            // border-image-source: radial-gradient(circle at top left, #51a2e9, #ff4d5a);
+            // transition: transform 0.2s, opacity 1.2s;   
+           
             // position: absolute;
         
             width: 60%;
@@ -279,6 +284,111 @@ article{
     }
 }
 
+#contato{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+  
+color: white;
+width: 100%;
+    height: 80vh;
+    gap: 10px;
+    #titulo-contato{
+        display: flex;
+        padding: 2%;
+        align-items: center;
+        justify-content: center;
+        h1{
+            background: linear-gradient(to top, #1758A7, 30%, transparent 40%);
+    
+            font-size: 3rem;
+            color: white;
+        }     
+    }
+    p{
+        text-align: start;
+        width: 35%;
+        // font-size: 110%;
+        font-size: clamp(0.6rem, 1.1rem, 1.3rem);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+        height: 100%;
+        width: 35%;  
+        // background: #1A1A1A;
+    
+       
+            input{
+                padding: 1%;
+               background: #282828;
+               color: white;
+               border: none;
+                width: 100%;
+                height: 10%;
+                outline: none;
+                
+            }
+            textarea{
+                padding: 1%;
+                color: white;
+                border: none;
+                background: #282828;
+                width: 100%;
+                padding: 0.2%;
+                height: 30%;
+                resize: none;
+                outline: none;
+                font-size: 16px;
+            }
+        
+            button{
+            
+                background: #282828;
+                color: white;
+                padding: 1%;
+                font-size: 16px;
+                width: 15%;
+                cursor: pointer;
+
+            }
+            .btn {
+              
+                position: relative;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                font-weight: 600;
+                color: white;
+                background: none;
+                border: none;
+                // border-bottom: 4px solid #646cff;
+                border-radius: 8px;
+                cursor: pointer;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                padding: 1%;
+                font-size: 16px;
+                width: 15%;
+              }
+              
+              .liquid {
+                background: linear-gradient(#646cff 0 0) no-repeat 0 100% / 100% var(--p, 0.2em);
+                transition: background-position 0.3s, background-size 0.3s;
+                --p: 0.2em; /* Define o tamanho inicial */
+              }
+              
+              .liquid:hover {
+                --p: 100%;
+                --t: 0.3s;
+                color: #fff;
+              }
+        }
+    
+    }
+
 
 footer{
     display: flex;
@@ -365,6 +475,17 @@ footer{
                 color: white;
             }
         }
+}
+#contato{
+    p{
+        width: 60%;
+    }
+    form{
+        width:60%;
+        input{
+            height: 15%;
+        }
+    }
 }
 }
  @media (max-width:512px){

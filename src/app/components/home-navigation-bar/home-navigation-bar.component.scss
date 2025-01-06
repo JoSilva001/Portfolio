@@ -31,22 +31,22 @@ nav ul li a {
   nav ul li a:hover {
     text-decoration: none;
     transition: 0.2s;
-    color: #FF4D5A;
+    color: #1758A7;
   }
   
   
   nav ul li a.active{
     transition: 0.5s ease;
-    color: #FF4D5A; /* Cor do item ativo */
+    color: #1758A7; /* Cor do item ativo */
      text-shadow:   
      //0 0 7px #fff,
     // 0 0 10px #fff,
     // 0 0 21px #fff,
-    0 0 42px #FF4D5A,
-    0 0 82px #FF4D5A,
-    0 0 92px #FF4D5A,
-    0 0 102px #FF4D5A,
-    0 0 151px #FF4D5A; 
+    0 0 42px #1758A7,
+    0 0 82px #1758A7,
+    0 0 92px #1758A7,
+    0 0 102px #1758A7,
+    0 0 151px #1758A7; 
   }
   @media (max-width:540px){
     .navegacao{
