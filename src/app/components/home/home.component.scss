@@ -108,6 +108,16 @@ main{
         translate: 0 0;
     }
 }
+@keyframes leftRight {
+    from{
+        opacity: 0;
+        translate: -100vw 0;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
 @keyframes reveal{
     from{
         opacity: 0;
@@ -118,10 +128,47 @@ main{
         clip-path: inset(0% 0% 0% 0%);
     }
 }
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .appear{
+    animation: appear 3s ease-out forwards;
+   
+  }
+  .reveal{
+    animation: reveal 2s;
+  }
+  .leftRight{
+    animation: leftRight 2s ease-out forwards;
+  }
+  .fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  .delay-1 {
+    animation-delay: 1s;
+  }
+  
+  .delay-2 {
+    animation-delay:1.2s;
+  }
+  .delay-3 {
+    animation-delay: 1.5s;
+  }
+
+  .delay-4 {
+    animation-delay:1.7s;
+  }
+
 #sobre{
     display: flex;  
-    animation: appear 2s ease-in-out;
-    // animation-timeline: scroll();
     min-height: 100vh;
     flex-wrap: wrap;
     // background: #1A1A1A;
@@ -191,6 +238,7 @@ font-size: 2em;
   }
   
   #tecnologias img {
+    opacity: 0;
     width: 15%; 
     padding: 2%;
     border: double 3px transparent;
@@ -586,3 +634,4 @@ footer{
     // -webkit-transform: scale(-0.5);
     transform: scale(0.97);
 }
+

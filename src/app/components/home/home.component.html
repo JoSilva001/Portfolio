@@ -13,12 +13,13 @@
     </section>
     <app-home-navigation-bar></app-home-navigation-bar>
     <section id="sobre">
-        <div class="titulo">
+        <div  #animatedElement [class.appear]="isVisible" class="titulo">
             <h1>SOBRE MIM</h1>
         </div>
 
+
         <div id="sobre-conteudo">
-            <div id="apresentacao">
+            <div id="apresentacao" #animatedElement [class.leftRight]="isVisible">
                 <!-- <img style="width:40%;" src="https://pics.craiyon.com/2023-06-19/c2aeb320649343af8fa9ef02c1b8f0c8.webp"> -->
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 482.9 482.9"
@@ -55,26 +56,26 @@
                     única de criatividade, lógica, tecnologia e nunca ficar sem coisas novas para descobrir, impulsiona
                     o meu entusiasmo e paixão pelo desenvolvimento web</p>
             </div>
-            <div id="tecnologias">
+            <div   id="tecnologias">
 
 
-                <div>
-                    <img src="./assets/git.png">
-                    <img src="./assets/angular.png">
-                    <img src="./assets/boostrap.png">
+                <div #animatedElement >
+                    <img [class.appear]="isVisible" [class.delay-1]="isVisible" src="./assets/git.png">
+                    <img [class.appear]="isVisible" [class.delay-3]="isVisible" src="./assets/angular.png">
+                    <img [class.appear]="isVisible" [class.delay-4]="isVisible" src="./assets/boostrap.png">
                 </div>
                 <div>
 
-                    <img src="./assets/html.png">
-                    <img src="./assets/ts.png">
-                    <img src="./assets/css.png">
-                    <img src="./assets/sass.png">
+                    <img [class.appear]="isVisible" [class.delay-1]="isVisible" src="./assets/html.png">
+                    <img [class.appear]="isVisible" [class.delay-4]="isVisible" src="./assets/ts.png">
+                    <img [class.appear]="isVisible" [class.delay-2]="isVisible" src="./assets/css.png">
+                    <img [class.appear]="isVisible" [class.delay-3]="isVisible" src="./assets/sass.png">
                 </div>
                 <div>
 
-                    <img src="./assets/java4.png">
-                    <img src="./assets/postgreSQL2.png">
-                    <img src="./assets/springboot.png">
+                    <img [class.appear]="isVisible" [class.delay-4]="isVisible" src="./assets/java4.png">
+                    <img [class.appear]="isVisible" [class.delay-3]="isVisible" src="./assets/postgreSQL2.png">
+                    <img [class.appear]="isVisible" [class.delay-1]="isVisible" src="./assets/springboot.png">
                 </div>
 
 

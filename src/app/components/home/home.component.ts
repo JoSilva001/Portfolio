@@ -1,43 +1,19 @@
-import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+
 import { Component } from '@angular/core';
 import { HomeNavigationBarComponent } from '../home-navigation-bar/home-navigation-bar.component';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import {  HostListener, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-home',
   standalone: true,
-  animations: [trigger('fadeInRight', [
-    transition(':enter', [ // Quando o elemento é inserido no DOM
-      style({ opacity: 0, transform: 'translateX(10%)' }),
-      animate('1000ms ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
-    ])
-  ]),
-  trigger('fadeInLeft', [
-    transition(':enter', [ // Quando o elemento é inserido no DOM
-      style({ opacity: 0, transform: 'translateX(-10%)' }), // Começa fora da tela à esquerda
-      animate('1000ms ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
-    ])
-  ]),
-  trigger('fadeInDown', [
-    transition(':enter', [ // Quando o elemento é inserido no DOM
-      style({ opacity: 0, transform: 'translateY(-10%)' }), // Começa fora da tela acima
-      animate('1000ms ease-in', style({ opacity: 1, transform: 'translateY(0)' }))
-    ])
-  ]),
-  trigger('fadeInUp', [
-    transition(':enter', [ // Quando o elemento é inserido no DOM
-      style({ opacity: 0, transform: 'translateY(10%)' }), // Começa fora da tela abaixo
-      animate('1000ms 1000ms ease-in', style({ opacity: 1, transform: 'translateY(0)' }))
-    ])
-  ])
+  animations: [
 ],
-  imports: [HomeNavigationBarComponent,AnimateOnScrollModule],
+  imports: [HomeNavigationBarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  isVisible = false;
   
   irParaSecao(sectionId: string){
     const element = document.getElementById(sectionId);
@@ -57,5 +33,21 @@ export class HomeComponent {
         window.open('https://www.linkedin.com/in/josesilvacode/')
       }
     }
+  
+
+  @ViewChild('animatedElement') animatedElement!: ElementRef;
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    if (this.isVisible) return;
+
+    const element = this.animatedElement.nativeElement;
+    const rect = element.getBoundingClientRect();
+
+    // Verifica se o elemento está visível na janela de visualização
+    const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+    this.isVisible = isInView;
+  }
+    
     
 }
