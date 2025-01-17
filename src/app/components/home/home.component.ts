@@ -1,20 +1,37 @@
 
 import { Component } from '@angular/core';
 import { HomeNavigationBarComponent } from '../home-navigation-bar/home-navigation-bar.component';
-
+import { FormGroup, FormBuilder,  Validators, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import {  HostListener, ElementRef, ViewChild } from '@angular/core';
+import { HttpClient, HttpClientModule} from '@angular/common/http';
+
 @Component({
   selector: 'app-home',
   standalone: true,
   animations: [
 ],
-  imports: [HomeNavigationBarComponent],
+  imports: [HomeNavigationBarComponent,FormsModule, CommonModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
+
+
 export class HomeComponent {
+  submitted: boolean = false;
   isVisible = false;
+  formulario: FormGroup = new FormGroup({});
+  formspreeUrl = 'https://formspree.io/f/mrbboorl'; 
+  dados = this.formulario.value;
+  constructor(private formBuilder: FormBuilder,private http: HttpClient) {} 
   
+  ngOnInit():void{
+    this.formulario = this.formBuilder.group({
+     email: ['', [Validators.required,Validators.email]],
+      mensagem: ['', [Validators.required]],
+    });
+  }
   irParaSecao(sectionId: string){
     const element = document.getElementById(sectionId);
       if (element) {
@@ -49,5 +66,26 @@ export class HomeComponent {
     this.isVisible = isInView;
   }
     
+  exibirErro(campoForm:any){
+    const errors = campoForm?.errors;
+    return (this.submitted &&campoForm?.touched) ? errors : null;
+  }
+  onConfirmar(): void {
+    if (this.formulario.valid) {
+    const formData = new FormData();
+    formData.append('email', this.formulario.get('email')?.value);
+    formData.append('mensagem', this.formulario.get('mensagem')?.value);
+      
+ 
+    this.http.post('https://formspree.io/f/mrbboorl', formData)
+    console.log(formData);
+    
+    }
+    else{
+      this.submitted = true;
+      this.formulario.markAllAsTouched();
+      return
+    }
+  }  
     
 }

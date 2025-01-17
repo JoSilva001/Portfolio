@@ -122,15 +122,21 @@
         
         <p>Tem alguma pergunta ou quer trabalhar comigo? entre em contato comigo, responderei o mais rápido possivel.</p>
         <!-- modify this form HTML and place wherever you want your form -->
-        <form action="https://formspree.io/f/mrbboorl" method="POST">
+        <form [formGroup]="formulario" action="https://formspree.io/f/mrbboorl" method="POST"(ngSubmit)="onConfirmar()">
          
-                <input placeholder="Email" name="email" name="email">
-                <textarea placeholder="Mensagem" name="message"></textarea>
+                <input placeholder="Email"  formControlName="email" name="email">
+                <textarea placeholder="Mensagem"  formControlName="mensagem"></textarea>
 
             <!-- your other form fields go here -->
             <button class="btn liquid" type="submit">Enviar</button>
+            <div class="mostrar-erro">
+                <p *ngIf="exibirErro(formulario.get('email'))?.['email']"> Digite um email válido</p>
+                <p *ngIf="exibirErro(formulario.get('email'))?.['required']">Digite um email.</p>
+                <p *ngIf="exibirErro(formulario.get('mensagem'))?.['required']"> Digite uma mensagem.</p>
+            </div>
         </form>
-    </section>
+      
+        </section>
     <footer>
         <a href="https://github.com/JoSilva001" target="_blank" rel="noopener noreferrer">
             <i class="pi pi-github" style="font-size: 2rem"></i>
