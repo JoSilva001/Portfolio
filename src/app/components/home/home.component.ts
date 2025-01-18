@@ -72,14 +72,24 @@ export class HomeComponent {
   }
   onConfirmar(): void {
     if (this.formulario.valid) {
-    const formData = new FormData();
-    formData.append('email', this.formulario.get('email')?.value);
-    formData.append('mensagem', this.formulario.get('mensagem')?.value);
-      
- 
-    this.http.post('https://formspree.io/f/mrbboorl', formData)
-    console.log(formData);
+      const formData = {
+        email: this.formulario.get('email')?.value,
+        mensagem: this.formulario.get('mensagem')?.value,
+      };
     
+      this.http.post('https://formspree.io/f/mrbboorl', formData, {
+        headers: { 'Content-Type': 'application/json' },
+      }).subscribe({
+        next: (response) => {
+          console.log('Formulário enviado com sucesso:', response);
+    
+          // Redireciona manualmente para a página de agradecimento do Formspree
+          window.location.href = 'https://formspree.io/thanks?language=pt';
+        },
+        error: (err) => {
+          console.error('Erro ao enviar o formulário:', err);
+        },
+      });
     }
     else{
       this.submitted = true;

@@ -122,7 +122,7 @@
         
         <p>Tem alguma pergunta ou quer trabalhar comigo? entre em contato comigo, responderei o mais rápido possivel.</p>
         <!-- modify this form HTML and place wherever you want your form -->
-        <form [formGroup]="formulario" action="https://formspree.io/f/mrbboorl" method="POST"(ngSubmit)="onConfirmar()">
+        <form [formGroup]="formulario" (ngSubmit)="onConfirmar()">
          
                 <input placeholder="Email"  formControlName="email" name="email">
                 <textarea placeholder="Mensagem"  formControlName="mensagem"></textarea>
