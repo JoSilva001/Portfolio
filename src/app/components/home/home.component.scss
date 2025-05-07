@@ -325,40 +325,90 @@ article{
 }
 .projeto-2{
     grid-area:projeto-2;
-    background-color: green;
-    background: #1A1A1A;
+   display: flex;
+      justify-content: flex-end;
+   background-color: blue;
+   background: #1A1A1A;
+   a.ng-tns-c1771090904-0 {
     display: flex;
-       justify-content: flex-end;
+    justify-content: flex-end;
+}
+   h1{
+    position: relative;
+    bottom: 100px;
     
-       h1{
-        position: relative;
-        bottom: 100px;
-       }
-       article{
-        display: flex;
-        justify-content: flex-end;
-        right: 5%;
-        position: relative;
-        height: 80%;
-        width:  80%;
-      
-        img{
-            padding: 7%;
+   }
+   article{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 70%;
+    width:  80%;
+    right:5%;
+    // background-color:brown ;
+   
+        img{    
+            // border: double 3px transparent;
+            // border-radius: 10px;
+             
+            // border-image-slice: 1;
+            // border-image-source: radial-gradient(circle at top left, #51a2e9, #ff4d5a);
+            // transition: transform 0.2s, opacity 1.2s;   
+           
             // position: absolute;
-            background-color:#FF4D5A ;
-            width: 50%;
+        
+            width: 60%;
             height: 100%;
             // right: 120px;         
         }
         div{
            position: absolute;
-           right: 50%;
+           left: 35%;
             bottom:70%;
-            color: white;
-            font-size: 40px;
+            color: #1758A7; 
+            border: #1A1A1A;
+            // font-size: 40px;
+            font-size: clamp(0.6rem, 1.1rem, 1.3rem );
+
         }
-       }
+   }
 }
+// .projeto-2{
+//     grid-area:projeto-2;
+//     background-color: green;
+//     background: #1A1A1A;
+//     display: flex;
+//        justify-content: flex-end;
+    
+//        h1{
+//         position: relative;
+//         bottom: 100px;
+//        }
+//        article{
+//         display: flex;
+//         justify-content: flex-end;
+//         right: 5%;
+//         position: relative;
+//         height: 80%;
+//         width:  80%;
+      
+//         img{
+//             padding: 7%;
+//             // position: absolute;
+//             background-color:#FF4D5A ;
+//             width: 50%;
+//             height: 100%;
+//             // right: 120px;         
+//         }
+//         div{
+//            position: absolute;
+//            right: 50%;
+//             bottom:70%;
+//             color: white;
+//             font-size: 40px;
+//         }
+//        }
+// }
 .projeto-3{
     grid-area:projeto-3;
     background-color: bisque;
