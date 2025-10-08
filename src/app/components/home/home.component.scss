@@ -282,8 +282,8 @@ article{
    display: flex;
 //    align-items: center;
  
-   background-color: blue;
-   background: #1A1A1A;
+//    background-color: #1758A7;
+//    background: #1A1A1A;
    h1{
     position: relative;
     bottom: 100px;
@@ -295,6 +295,7 @@ article{
     height: 70%;
     width:  80%;
     left:5%;
+    top:10%;
     // background-color:brown ;
    
         img{    
@@ -315,9 +316,12 @@ article{
            position: absolute;
            left: 50%;
             bottom:70%;
-            color: #1758A7; 
+            // color: #1758A7; 
+            background-color:  #1758A7;;
+            border-radius: 10px;
+            padding: 1%;
+            color:white;
             border: #1A1A1A;
-            // font-size: 40px;
             font-size: clamp(0.6rem, 1.1rem, 1.3rem );
 
         }
@@ -358,7 +362,7 @@ article{
             // position: absolute;
             position: relative;
             left: 20%;
-            width: 65%;
+            width: 78%;
             height: 100%;
             // right: 120px;         
         }
@@ -366,7 +370,11 @@ article{
            position: absolute;
            left: 20%;
             bottom:70%;
-            color: #1758A7; 
+            background-color:  #1758A7;;
+            border-radius: 10px;
+            padding: 1%;
+            color:white;
+
             border: #1A1A1A;
             // font-size: 40px;
             font-size: clamp(0.6rem, 1.1rem, 1.3rem );
