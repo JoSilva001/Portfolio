@@ -3,8 +3,7 @@
         <div id="inicio-conteudo">
             <h1>Olá, eu sou <span>José</span></h1>
             <h2> desenvolvedor Fullstack.</h2>
-            <button class="btt animate" (click)="irParaSecao('sobre')">Meu trabalho <i
-                    class="pi pi-arrow-down"></i></button>
+            <button class="btt animate"(click)="irParaSecao('sobre')">Meu trabalho <i class="pi pi-arrow-down"></i></button>
         </div>
         <div>
 
@@ -12,7 +11,7 @@
     </section>
     <app-home-navigation-bar></app-home-navigation-bar>
     <section id="sobre">
-        <div #animatedElement [class.appear]="isVisible" class="titulo">
+        <div  #animatedElement [class.appear]="isVisible" class="titulo">
             <h1>SOBRE MIM</h1>
         </div>
 
@@ -54,10 +53,10 @@
                     única de criatividade, lógica, tecnologia e nunca ficar sem coisas novas para descobrir, impulsiona
                     o meu entusiasmo e paixão pelo desenvolvimento web</p>
             </div>
-            <div id="tecnologias">
+            <div   id="tecnologias">
 
 
-                <div #animatedElement>
+                <div #animatedElement >
                     <img [class.appear]="isVisible" [class.delay-1]="isVisible" src="./assets/git.png">
                     <img [class.appear]="isVisible" [class.delay-3]="isVisible" src="./assets/angular.png">
                     <img [class.appear]="isVisible" [class.delay-4]="isVisible" src="./assets/boostrap.png">
@@ -89,19 +88,18 @@
         <div class="projeto-1">
 
             <article>
-
-                <a href="https://ambientedoescritorio.com.br/#/" target="_blank">
-                    <!-- <p id="projeto-1-info">bro's stuff</p><img src="./assets/printambiente.PNG" class="imgProjetos"> -->
-                </a>
-
+                  <!-- <p id="projeto-1-info">bro's stuff</p>   -->
+                <a href="https://ambientedoescritorio.com.br/#/" target="_blank"><img src="./assets/printambiente.PNG"
+                        class="imgProjetos"></a>
+                    
                 <div id="texto-1">catálogo loja de móveis - ambiente do escritório</div>
             </article>
 
         </div>
         <div class="projeto-2">
             <article>
-                <a href="https://credit-card-rust-one.vercel.app/" target="_blank"><img
-                        src="./assets/projCreditCard.png" class="imgProjetos"></a>
+                <a href="https://credit-card-rust-one.vercel.app/" target="_blank"><img src="./assets/projCreditCard.png"
+                        class="imgProjetos"></a>
                 <div id="texto-1">Formulário de validação de documento</div>
             </article>
         </div>
@@ -116,13 +114,12 @@
         <div id="titulo-contato">
             <h1>Contato</h1>
         </div>
-
-        <p>Tem alguma pergunta ou quer trabalhar comigo? entre em contato comigo, responderei o mais rápido possivel.
-        </p>
+        
+        <p>Tem alguma pergunta ou quer trabalhar comigo? entre em contato comigo, responderei o mais rápido possivel.</p>
         <form [formGroup]="formulario" (ngSubmit)="onConfirmar()">
-
-            <input placeholder="Email" formControlName="email" name="email">
-            <textarea placeholder="Mensagem" formControlName="mensagem"></textarea>
+         
+                <input placeholder="Email"  formControlName="email" name="email">
+                <textarea placeholder="Mensagem"  formControlName="mensagem"></textarea>
 
             <button class="btn liquid" type="submit">Enviar</button>
             <div class="mostrar-erro">
@@ -131,8 +128,8 @@
                 <p *ngIf="exibirErro(formulario.get('mensagem'))?.['required']"> Digite uma mensagem.</p>
             </div>
         </form>
-
-    </section>
+      
+        </section>
     <footer>
         <a href="https://github.com/JoSilva001" target="_blank" rel="noopener noreferrer">
             <i class="pi pi-github" style="font-size: 2rem"></i>
