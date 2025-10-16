@@ -6,9 +6,7 @@
             <button class="btt animate"(click)="irParaSecao('sobre')">Meu trabalho <i class="pi pi-arrow-down"></i></button>
         </div>
         <div>
-            <!-- pode haver uma barra diagonal e mudança de cor parece ser legal -->
-            <!-- <p>Imagem/representação
-            </p> -->
+
         </div>
     </section>
     <app-home-navigation-bar></app-home-navigation-bar>
@@ -20,7 +18,6 @@
 
         <div id="sobre-conteudo">
             <div id="apresentacao" #animatedElement [class.leftRight]="isVisible">
-                <!-- <img style="width:40%;" src="https://pics.craiyon.com/2023-06-19/c2aeb320649343af8fa9ef02c1b8f0c8.webp"> -->
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 482.9 482.9"
                     style="enable-background:new 0 0 482.9 482.9" xml:space="preserve" height="40%"
@@ -85,8 +82,6 @@
 
     </section>
     <section id="projetos">
-
-        <!-- alinhas a esquerda, texto a direita -->
         <div id="titulo-projetos">
             <h1>Projetos</h1>
         </div>
@@ -119,13 +114,11 @@
         </div>
         
         <p>Tem alguma pergunta ou quer trabalhar comigo? entre em contato comigo, responderei o mais rápido possivel.</p>
-        <!-- modify this form HTML and place wherever you want your form -->
         <form [formGroup]="formulario" (ngSubmit)="onConfirmar()">
          
                 <input placeholder="Email"  formControlName="email" name="email">
                 <textarea placeholder="Mensagem"  formControlName="mensagem"></textarea>
 
-            <!-- your other form fields go here -->
             <button class="btn liquid" type="submit">Enviar</button>
             <div class="mostrar-erro">
                 <p *ngIf="exibirErro(formulario.get('email'))?.['email']"> Digite um email válido</p>

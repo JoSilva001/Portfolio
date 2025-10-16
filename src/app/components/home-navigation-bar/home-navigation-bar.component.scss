@@ -1,11 +1,8 @@
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 
 .navegacao{
     position: sticky;
     top: 0px;
     z-index: 3;
-    // width: 100%;
-    // display: flex;
     nav ul{
        
         display: flex;
@@ -37,11 +34,8 @@ nav ul li a {
   
   nav ul li a.active{
     transition: 0.5s ease;
-    color: #1758A7; /* Cor do item ativo */
+    color: #1758A7;
      text-shadow:   
-     //0 0 7px #fff,
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
     0 0 42px #1758A7,
     0 0 82px #1758A7,
     0 0 92px #1758A7,
