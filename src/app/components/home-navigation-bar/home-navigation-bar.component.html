@@ -1,20 +1,19 @@
-
 <section class="navegacao">
-<nav>
-   <ul>
-    <li>
-        <a [ngClass]="{'active': currentSection === 'inicio'}"(click)="irParaSecao('inicio')">INÍCIO</a>
+    <nav>
+        <ul>
+            <li>
+                <a [ngClass]="{'active': currentSection === 'inicio'}" (click)="irParaSecao('inicio')">INÍCIO</a>
 
-    </li>
-    <li>
-        <a [ngClass]="{'active': currentSection === 'sobre'}"(click)="irParaSecao('sobre')">SOBRE</a>  
-    </li>
-    <li>
-        <a [ngClass]="{'active': currentSection === 'projetos'}" (click)="irParaSecao('projetos')">PROJETOS</a>  
-    </li>
-    <li>
-        <a [ngClass]="{'active': currentSection === 'contato'}"(click)="irParaSecao('contato')">CONTATO</a> 
-    </li>
-   </ul> 
-</nav>
+            </li>
+            <li>
+                <a [ngClass]="{'active': currentSection === 'sobre'}" (click)="irParaSecao('sobre')">SOBRE</a>
+            </li>
+            <li>
+                <a [ngClass]="{'active': currentSection === 'projetos'}" (click)="irParaSecao('projetos')">PROJETOS</a>
+            </li>
+            <li>
+                <a [ngClass]="{'active': currentSection === 'contato'}" (click)="irParaSecao('contato')">CONTATO</a>
+            </li>
+        </ul>
+    </nav>
 </section>
