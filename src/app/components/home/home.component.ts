@@ -1,37 +1,39 @@
 
-import { Component } from '@angular/core';
 import { HomeNavigationBarComponent } from '../home-navigation-bar/home-navigation-bar.component';
 import { FormGroup, FormBuilder,  Validators, ReactiveFormsModule} from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {  HostListener, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
-
+import { Component, OnInit } from '@angular/core';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 @Component({
   selector: 'app-home',
   standalone: true,
   animations: [
 ],
-  imports: [HomeNavigationBarComponent,FormsModule, CommonModule, ReactiveFormsModule, HttpClientModule],
+  imports: [HomeNavigationBarComponent,FormsModule, CommonModule, ReactiveFormsModule, HttpClientModule, CardModule, ButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 
 
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   submitted: boolean = false;
   isVisible = false;
   formulario: FormGroup = new FormGroup({});
   formspreeUrl = 'https://formspree.io/f/mrbboorl'; 
   dados = this.formulario.value;
   constructor(private formBuilder: FormBuilder,private http: HttpClient) {} 
-  
   ngOnInit():void{
+   
     this.formulario = this.formBuilder.group({
      email: ['', [Validators.required,Validators.email]],
       mensagem: ['', [Validators.required]],
     });
   }
+
   irParaSecao(sectionId: string){
     const element = document.getElementById(sectionId);
       if (element) {
