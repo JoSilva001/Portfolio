@@ -1,19 +1,35 @@
-<section class="navegacao">
+<header class="navegacao">
+   
     <nav>
+ <section id="nome">José Silva</section>
         <ul>
             <li>
-                <a [ngClass]="{'active': currentSection === 'inicio'}" (click)="irParaSecao('inicio')">INÍCIO</a>
+                <a [ngClass]="{'active': currentSection === 'inicio'}" (click)="irParaSecao('inicio')">Início</a>
 
             </li>
             <li>
-                <a [ngClass]="{'active': currentSection === 'sobre'}" (click)="irParaSecao('sobre')">SOBRE</a>
+                <a [ngClass]="{'active': currentSection === 'sobre'}" (click)="irParaSecao('sobre')">Sobre</a>
             </li>
             <li>
-                <a [ngClass]="{'active': currentSection === 'projetos'}" (click)="irParaSecao('projetos')">PROJETOS</a>
+                <a [ngClass]="{'active': currentSection === 'projetos'}" (click)="irParaSecao('projetos')">Projetos</a>
             </li>
             <li>
-                <a [ngClass]="{'active': currentSection === 'contato'}" (click)="irParaSecao('contato')">CONTATO</a>
+                <a [ngClass]="{'active': currentSection === 'contato'}" (click)="irParaSecao('contato')">Contato</a>
             </li>
         </ul>
+        <section id="contato">
+        <div></div>
+        <a href="https://github.com/JoSilva001" target="_blank" rel="noopener noreferrer">
+            <i class="pi pi-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/josesilvacode/" target="_blank" rel="noopener noreferrer">
+            <i class="pi pi-linkedin"></i>
+        </a>
+        <a href="https://github.com/JoSilva001" target="_blank" rel="noopener noreferrer">
+            <i class="pi pi-whatsapp"></i>
+        </a>
+        </section>
     </nav>
-</section>
+
+</header>
