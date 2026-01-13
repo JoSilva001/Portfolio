@@ -55,8 +55,8 @@ export class HomeComponent implements OnInit{
   
 
   @ViewChild('animatedElement') animatedElement!: ElementRef;
-
-  @HostListener('window:scroll', ['$event'])
+//  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onScroll(): void {
     if (this.isVisible) return;
 
