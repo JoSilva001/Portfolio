@@ -43,7 +43,18 @@ export class HomeNavigationBarComponent {
   //   observer.observe(this.animatedContainer.nativeElement);
   // }
 
-
+  createWhatsappLink() {
+ 
+    const telefone = '5561994384424';
+  
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+    const baseUrl = isMobile
+      ? 'https://api.whatsapp.com/send'
+      : 'https://web.whatsapp.com/send';
+  
+    return `${baseUrl}?phone=${telefone}`;
+  }
 
 
   
