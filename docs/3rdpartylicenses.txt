@@ -243,12 +243,17 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/forms
+Package: @angular/animations
 License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/animations
+Package: primeng
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: @angular/forms
 License: "MIT"
 
 
