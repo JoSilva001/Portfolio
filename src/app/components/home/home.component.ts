@@ -7,13 +7,13 @@ import {  HostListener, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CardModule } from 'primeng/card';
-import { ButtonModule } from 'primeng/button';
+
 @Component({
   selector: 'app-home',
   standalone: true,
   animations: [
 ],
-  imports: [HomeNavigationBarComponent,FormsModule, CommonModule, ReactiveFormsModule, HttpClientModule, CardModule, ButtonModule],
+  imports: [HomeNavigationBarComponent,FormsModule, CommonModule, ReactiveFormsModule, HttpClientModule, CardModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

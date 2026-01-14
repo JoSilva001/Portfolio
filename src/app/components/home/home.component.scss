@@ -1,5 +1,11 @@
     @import "primeicons/primeicons.css";
-
+:host ::ng-deep .p-tieredmenu {
+  width: 100%;
+  
+}
+:host ::ng-deep .pi {
+  transition: transform 0.2s ease;
+}
     html {
         width: 100vw;
         box-sizing: border-box;
@@ -290,16 +296,36 @@
     }
 
     .projeto {
-        width: 30%; 
-             height:100%;
+        width: 25%; 
+             height:600px;
         img{
-  border-top-left-radius: 10%;
- border-top-right-radius: 10%;
+            height: 250px;
+  border-top-left-radius: 5%;
+ border-top-right-radius: 5%;
             width: 100%;
         }
+        p{
+            padding: 5%;
+        }
+        a{
+                transition: 0.5s;
+        }
+        a:hover{
+            
+            transition: 0.2s;
+            color: #223754;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+    .projeto:hover{
+          transform: translateY(-8px); /* sobe 8px */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
     }
  .p-header{
-    padding: 0% 2% 0% 2%;
+    padding: 4%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -309,18 +335,23 @@
         color: white;
         text-decoration: none;
     }
+    h1{
+        font-size: 1.3em;
+    }
      }
     :host ::ng-deep .p-card {
-        border-radius: 10%;
+        border-radius: 3%;
         height: 100%;
         color: white !important;
         background: #272727 !important;
         border-color: hsla(0, 0%, 100%, .1) !important;
         .p-card-body{
+    // text-align: center;
     padding: 2%;
+  
 }
-    }
 
+    }
     #contato {
         display: flex;
         align-items: center;
@@ -410,7 +441,7 @@
                 transition: all 0.3s ease;
                 padding: 1%;
                 font-size: 16px;
-                width: 15%;
+                width: 60px;
             }
 
             .liquid {
@@ -540,14 +571,17 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+
                 gap: 20px;
                 .projeto{
-                    width: 80%;
-                    height: 100%;
+                    width: 60%;
+               
                 }
             }
         #contato {
+            
             p {
+                text-align: center;
                 width: 60%;
             }
 
@@ -559,8 +593,15 @@
                 }
             }
         }
+        #projeto{
+            height: 400px;
+        }
     }
-
+@media (max-width:600px) {
+      .projeto{
+                    width: 80% !important;
+      }
+}
     @media (max-width:512px) {
         #projetos {
             div {

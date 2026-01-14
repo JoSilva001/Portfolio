@@ -1,10 +1,10 @@
-
 <main>
-      <section id="inicio">
+    <section id="inicio">
         <div id="inicio-conteudo">
             <h1>Olá, eu sou <span>José</span></h1>
             <h2> desenvolvedor Fullstack.</h2>
-            <button class="btt animate"(click)="irParaSecao('sobre')">Meu trabalho <i class="pi pi-arrow-down"></i></button>
+            <button class="btt animate" (click)="irParaSecao('sobre')">Meu trabalho <i
+                    class="pi pi-arrow-down"></i></button>
         </div>
         <div>
 
@@ -12,7 +12,7 @@
     </section>
     <app-home-navigation-bar></app-home-navigation-bar>
     <section id="sobre">
-        <div  #animatedElement [class.appear]="isVisible" class="titulo">
+        <div #animatedElement [class.appear]="isVisible" class="titulo">
             <h1>SOBRE MIM</h1>
         </div>
 
@@ -55,7 +55,7 @@
                     o meu entusiasmo e paixão pelo desenvolvimento web</p>
             </div>
             <div id="tecnologias">
-                <div #animatedElement >
+                <div #animatedElement>
                     <img [class.appear]="isVisible" [class.delay-1]="isVisible" src="./assets/git.png">
                     <img [class.appear]="isVisible" [class.delay-3]="isVisible" src="./assets/angular.png">
                     <img [class.appear]="isVisible" [class.delay-4]="isVisible" src="./assets/primeng-logo.png">
@@ -84,63 +84,68 @@
         <div id="titulo-projetos">
             <h1>Projetos</h1>
         </div>
-    <div id="area-projetos">
-<div class="projeto">
-    <p-card  >
-        <ng-template pTemplate="header">
- 
-         <img src=".\assets\printambiente.PNG"
-                        class="imgProjetos">
- 
-        </ng-template>
-                                          <div class="p-header">
-                <h1>Catálogo de loja</h1>
-                <a href="https://github.com/JoSilva001/ambienteDoEscritorio">⬈</a>
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
-        </p>
-    </p-card>
-</div>
-<div class="projeto">
-    <p-card header="Cadastro de Cartão" >
-        <ng-template pTemplate="header">
-         <img src="./assets/projCreditCard.png"
-                        class="imgProjetos">
-        </ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
-        </p>
-    </p-card>
-</div>
-<div class="projeto">
-    <p-card header="Login Page" >
-        <ng-template pTemplate="header">
-         <img class="imgProjetos" src="./assets/login-page.png">
-        </ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
-        </p>
-    </p-card>
-   
-</div>
-</div>
+        <div id="area-projetos">
+            <div class="projeto">
+                <p-card>
+                    <ng-template pTemplate="header">
 
- 
+                        <img src=".\assets\printAmbiente.PNG" class="imgProjetos">
+
+                    </ng-template>
+                    <div class="p-header">
+                        <h1>Catálogo de loja</h1>
+                        <a target="_blank" href="https://github.com/JoSilva001/ambienteDoEscritorio">⬈</a>
+                    </div>
+                    <p>
+                       Esse é um projeto Freelancer para uma loja de Móveis localizada em Formosa-GO.<br>
+Este catálogo foi criado com o intuito de mostrar os produtos em estoque e facilitar a comunicação do cliente com a Loja.
+                    </p>
+                </p-card>
+            </div>
+            <div class="projeto">
+                <p-card>
+                    <ng-template pTemplate="header">
+                        <img src="./assets/projCreditCard.png" class="imgProjetos">
+                    </ng-template>
+                    <div class="p-header">
+                        <h1>Cadastro de Cartão</h1>
+                        <a target="_blank" href="https://github.com/JoSilva001/CreditCard">⬈</a>
+                    </div>
+                    <p>
+                        É um site com visual intuitivo para que o usuário possa cadastrar dados de seu cartão de Crédito
+                    </p>
+                </p-card>
+            </div>
+            <div class="projeto">
+                <p-card>
+                    <ng-template pTemplate="header">
+                        <img class="imgProjetos" src="./assets/login-page.png">
+                    </ng-template>
+                    <div class="p-header">
+                        <h1>Login Page</h1>
+                        <a target="_blank" href="https://github.com/JoSilva001/login-page-main">⬈</a>
+                    </div>
+                    <p>
+                       Este projeto é uma aplicação de Login e Cadastro
+                    </p>
+                </p-card>
+
+            </div>
+        </div>
+
+
     </section>
     <section id="contato">
         <div id="titulo-contato">
             <h1>Contato</h1>
         </div>
-        
-        <p>Tem alguma pergunta ou quer trabalhar comigo? entre em contato comigo, responderei o mais rápido possivel.</p>
+
+        <p>Tem alguma pergunta ou quer trabalhar comigo? entre em contato comigo, responderei o mais rápido possivel.
+        </p>
         <form [formGroup]="formulario" (ngSubmit)="onConfirmar()">
-         
-                <input placeholder="Email"  formControlName="email" name="email">
-                <textarea placeholder="Mensagem"  formControlName="mensagem"></textarea>
+
+            <input placeholder="Email" formControlName="email" name="email">
+            <textarea placeholder="Mensagem" formControlName="mensagem"></textarea>
 
             <button class="btn liquid" type="submit">Enviar</button>
             <div class="mostrar-erro">
@@ -149,8 +154,8 @@
                 <p *ngIf="exibirErro(formulario.get('mensagem'))?.['required']"> Digite uma mensagem.</p>
             </div>
         </form>
-      
-        </section>
+
+    </section>
     <footer>
         <a href="https://github.com/JoSilva001" target="_blank" rel="noopener noreferrer">
             <i class="pi pi-github" style="font-size: 2rem"></i>
@@ -158,7 +163,7 @@
         <a href="https://www.linkedin.com/in/josesilvacode/" target="_blank" rel="noopener noreferrer">
             <i class="pi pi-linkedin" style="font-size: 2rem"></i>
         </a>
-       
+
     </footer>
 
 </main>

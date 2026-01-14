@@ -17,6 +17,20 @@
                 <a [ngClass]="{'active': currentSection === 'contato'}" (click)="irParaSecao('contato')">Contato</a>
             </li>
         </ul>
+        <!-- <p-button
+    [icon]="menuAberto ? 'pi pi-times' : 'pi pi-bars'"
+    class="p-button-text p-button-lg"
+    (click)="toggleMenu($event)">
+    </p-button>
+
+    <p-tieredMenu
+    #menu
+    [model]="items"
+    [popup]="true"
+        appendTo="body"
+        styleClass="menu-mobile-full"
+    (onHide)="menuAberto = false">
+    </p-tieredMenu> -->
         <section id="header-contato">
         <div></div>
         <a href="https://github.com/JoSilva001" target="_blank" rel="noopener noreferrer">
